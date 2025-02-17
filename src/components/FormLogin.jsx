@@ -1,5 +1,6 @@
 import Button from './Button';
 import Input from './Input';
+import { validateForm } from '../utils/validation';
 import styles from '../styles/stylesForm.css';
 import React, { useState } from 'react'
 
@@ -12,7 +13,7 @@ const FormLogin = () => {
     const hadleInputChage = (e) => {
         const { name, value } = e.target;
         setFormValue({
-            ...formValues,
+            ...formValue,
             [name]: value,
         });
     }
@@ -25,7 +26,7 @@ const FormLogin = () => {
             alert(erros.join('\n'));
         } else {
             try {
-               const response = await loginUser(formValue);
+               const response = await loginUser(formValue); // chamaria da API
                console.log('Resposta da API:', response.data);
                alert('Login realizado com sucesso!');
             } catch (error) {
@@ -40,7 +41,7 @@ const FormLogin = () => {
         <Input
            type="email"
            name="email"
-           value={formValues.email}
+           value={formValue.email}
            onChage={hadleInputChage}
            placeholder="digite seu email"
            required
@@ -50,7 +51,7 @@ const FormLogin = () => {
         <Input 
            type="password"
            name="password"
-           value={formValues.password}
+           value={formValue.password}
            onChage={hadleInputChage}
            placeholder="Digite sua senha"
            required

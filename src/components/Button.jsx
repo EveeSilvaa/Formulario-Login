@@ -1,11 +1,11 @@
-
+import React from 'react';
 import styles from '../styles/stylesForm.css';
 
 
-const Button = () => {
+const Button = ({type, children }) => {
   return (
-    <button type={} className={styles.button}>
-        {}
+    <button type={type} className={styles.button}>
+        {children}
     </button>
   )
 }
