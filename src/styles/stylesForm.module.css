@@ -1,0 +1,92 @@
+.formContainer {
+  max-width: 350px;
+  margin: auto; 
+  margin-top: 50px; /* distância do topo */
+  padding: 40px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  opacity: 0; /* inicialmente invisível */
+  transform: translateY(20px); /* deslocamento inicial */
+}
+
+.formContainer.visible {
+  opacity: 1; /* torna visível */
+  transform: translateY(0); /* remove o deslocamento */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.formContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #007bff;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Bordas arredondadas nos inputs */
+  font-size: 16px;
+  transition: border-color 0.3s ease; /* Transição suave para o foco */
+}
+
+.input:focus {
+  border-color: #007bff; /* Cor da borda ao focar no input */
+  outline: none; /* Remove o outline padrão */
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px; /* Bordas arredondadas no botão */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+}
+
+.button:hover {
+  background-color: #0056b3; /* Cor mais escura no hover */
+  transform: translateY(-2px); /* Efeito de levantar o botão */
+}
+
+.button:active {
+  transform: translateY(0); /* Efeito de pressionar o botão */
+}
+
+.light {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0); /* Gradiente claro */
+  color: #000000;
+}
+
+.dark {
+  background: linear-gradient(135deg, #333333, #222222); /* Gradiente escuro */
+  color: #ffffff;
+}
+
+.dark .input {
+  background-color: #444;
+  color: #fff;
+  border-color: #555;
+}
+
+.dark .button {
+  background-color: #0056b3;
+}
+
+.dark .button:hover {
+  background-color: #004080;
+}

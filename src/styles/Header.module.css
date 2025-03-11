@@ -1,0 +1,72 @@
+/* src/styles/Header.module.css */
+.header {
+  position: fixed;
+  display: flex;
+  right: 1px;
+  top: 0;
+  left: 0;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 10px;
+  background-color: #070838;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* alinha no centro, */
+    gap: 20px; /* da o espaçamento entre o titulo e a logo */
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.nav ul {
+    list-style: none; /* remove marcadores da lista */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* espaçamento entre os itens do menu */
+}
+
+.nav ul li {
+    display: inline-block;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none; /* retira o sublinhado */
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: #ffdd57; /* adicionando cor ao passar mouse */
+}
+
+.themeButton {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.themeButton:hover {
+  transform: scale(1.1); /* Efeito de zoom no hover */
+}
+
+/* Estilos para o modo escuro */
+.dark .header {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark .themeButton {
+  color: #fff;
+}
