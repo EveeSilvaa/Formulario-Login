@@ -11,14 +11,13 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.logo}>
         <h1>Pagina de login</h1>
-        <nav className={styles.nav} >
+        {/* <nav className={styles.nav} >
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/services">Services</a></li>
-                <li><a href="/contact">Contact</a></li>
             </ul>
-        </nav>
+        </nav> */}
       </div>
       <button onClick={toggleTheme} className={styles.themeButton}>
         {isDarkMode ? <FaSun size={24} /> : <FaMoon size={24} />} {/* Ícones personalizados */}

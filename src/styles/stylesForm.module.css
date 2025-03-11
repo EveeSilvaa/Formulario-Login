@@ -26,24 +26,26 @@
 
 .form {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* define o formato do formulario */
   gap: 20px;
 }
 
-
+.label {
+  text-align: left;
+}
 
 .input {
-  width: 100%;
-  padding: 12px;
+  width: 90%;
+  padding: 15px;
   border: 1px solid #ccc;
-  border-radius: 8px; /* Bordas arredondadas nos inputs */
+  border-radius: 8px; /* bordas arredondadas nos inputs */
   font-size: 16px;
   transition: border-color 0.3s ease; /* Transição suave para o foco */
 }
 
 .input:focus {
-  border-color: #007bff; /* Cor da borda ao focar no input */
-  outline: none; /* Remove o outline padrão */
+  border-color: #007bff; /* cor da borda ao focar no input */
+  outline: none; /* remove o outline padrão */
 }
 
 .button {
@@ -52,28 +54,28 @@
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 8px; /* Bordas arredondadas no botão */
+  border-radius: 8px; /* bordas arredondadas no botão */
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
 }
 
 .button:hover {
-  background-color: #0056b3; /* Cor mais escura no hover */
-  transform: translateY(-2px); /* Efeito de levantar o botão */
+  background-color: #0056b3; /* cor mais escura no hover */
+  transform: translateY(-2px); /* efeito de levantar o botão */
 }
 
 .button:active {
-  transform: translateY(0); /* Efeito de pressionar o botão */
+  transform: translateY(0); /* efeito de pressionar o botão */
 }
 
 .light {
-  background: linear-gradient(135deg, #ffffff, #f0f0f0); /* Gradiente claro */
+  background: linear-gradient(135deg, #ffffff, #f0f0f0); /* gradiente claro */
   color: #000000;
 }
 
 .dark {
-  background: linear-gradient(135deg, #333333, #222222); /* Gradiente escuro */
+  background: linear-gradient(135deg, #333333, #222222); /*  e gradiente escuro */
   color: #ffffff;
 }
 

@@ -31,10 +31,10 @@ const FormLogin = () => {
 
   return (
     <div className={`${styles.formContainer} ${isDarkMode ? styles.dark : styles.light} ${isVisible ? styles.visible : ''}`}>
-      <h1>Formulário de Login</h1> {/* Título dentro do container */}
+      <h1>Formulário de Login</h1> {/* pra conseguir colocar o título dentro do container */}
       <form onSubmit={handleSubmit} className={styles.form}>
-        <div>
-          <label>Email:</label>
+        <div className={styles.label}>
+          <label>Usuário</label>
           <input
             type="email"
             value={email}
@@ -43,8 +43,8 @@ const FormLogin = () => {
           />
           {errors.email && <span>{errors.email}</span>}
         </div>
-        <div>
-          <label>Senha:</label>
+        <div className={styles.label}>
+          <label>Senha</label>
           <input
             type="password"
             value={password}
