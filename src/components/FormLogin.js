@@ -1,18 +1,18 @@
-// src/components/FormLogin.js
+
 import React, { useState, useContext, useEffect } from 'react';
 import { validateEmail, validatePassword } from '../utils/validation';
 import { ThemeContext } from '../context/ThemeContext';
 import styles from '../styles/stylesForm.module.css';
+import Link from 'next/link'; // Importe o Link do Next.js
 
 const FormLogin = () => {
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({});
-  const [isVisible, setIsVisible] = useState(false); // Estado para animação
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Animação ao carregar o formulário
     setIsVisible(true);
   }, []);
 
@@ -25,16 +25,17 @@ const FormLogin = () => {
       setErrors({ email: emailError, password: passwordError });
     } else {
       setErrors({});
-      // Lógica para enviar o formulário
+      // Lógica para enviar o formulário e redirecionar para a HomePage
+      window.location.href = '/home'; // Redirecionamento temporário
     }
   };
 
   return (
     <div className={`${styles.formContainer} ${isDarkMode ? styles.dark : styles.light} ${isVisible ? styles.visible : ''}`}>
-      <h1>Formulário de Login</h1> {/* pra conseguir colocar o título dentro do container */}
+      <h1>Formulário de Login</h1>
       <form onSubmit={handleSubmit} className={styles.form}>
-        <div className={styles.label}>
-          <label>Usuário</label>
+        <div>
+          <label>Email</label>
           <input
             type="email"
             value={email}
@@ -43,7 +44,7 @@ const FormLogin = () => {
           />
           {errors.email && <span>{errors.email}</span>}
         </div>
-        <div className={styles.label}>
+        <div>
           <label>Senha</label>
           <input
             type="password"
@@ -54,6 +55,12 @@ const FormLogin = () => {
           {errors.password && <span>{errors.password}</span>}
         </div>
         <button type="submit" className={styles.button}>Login</button>
+        <p className={styles.forgotPassword}>
+          <Link href="/">Esqueceu a senha?</Link> {/* Link para o RegisterForm */}
+        </p>
+        <button type="button" className={styles.registerButton}>
+          <Link href="/register">Cadastre-se</Link> {/* Botão para o RegisterForm */}
+        </button>
       </form>
     </div>
   );

@@ -1,0 +1,261 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.formColumn {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  max-width: 500px; /* Largura maxima do container do formulario */
+  margin: 0;
+}
+
+.imageColumn {
+  flex: 1;
+  /* width: 120px; */
+  background: url('/images/tecnologic.jpg') no-repeat center center/cover; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px;
+  color: white;
+}
+
+.form {
+  max-width: 400px;
+  width: 100%; /* largura maxima do formulario */
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  text-align: left;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.formColumn h1 {
+    text-align: center;
+    display: block;
+    width: 40px;
+    color: #0f0f0f;
+    font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.loginLink {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.loginLink a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.loginLink a:hover {
+  color: #0056b3;
+}
+
+/* Estilos para o modo escuro */
+.dark .formColumn {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark .formGroup label {
+  color: #fff;
+}
+
+.dark .input {
+  background-color: #444;
+  color: #fff;
+  border-color: #555;
+}
+
+.dark .button {
+  background-color: #0056b3;
+}
+
+.dark .button:hover {
+  background-color: #004080;
+}
+
+.dark .loginLink a {
+  color: #007bff;
+}
+
+.dark .loginLink a:hover {
+  color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Nós usamos isso para empilhar o formulario e a img verticalmente */
+    }
+
+    .formColumn {
+        max-width: 100%; /* ocupa toda largura da tela */
+        padding: 20px 10px;
+    }
+
+    .imageColumn {
+        height: 400px;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .form {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .formGroup {
+        margin-bottom: 15px; /* Espaçamento reduzido */
+    }
+      
+    .formGroup label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #333;
+        font-size: 14px; /* Tamanho da fonte reduzido */
+    }
+      
+    .formColumn h1 {
+        text-align: center;
+        display: block;
+        width: 40px;
+        color: #0f0f0f;
+        font-weight: bold;
+    }
+
+    .input {
+        width: 100%;
+        padding: 10px; /* Padding reduzido */
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 14px; /* Tamanho da fonte reduzido */
+        transition: border-color 0.3s ease;
+    }
+      
+    .input:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+      
+    .button {
+        width: 100%;
+        padding: 10px; /* Padding reduzido */
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px; /* Tamanho da fonte reduzido */
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+      
+    .button:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+    }
+      
+    .button:active {
+        transform: translateY(0);
+    }
+      
+    .loginLink {
+        text-align: center;
+        margin-top: 10px;
+    }
+      
+    .loginLink a {
+        color: #007bff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-size: 14px; /* Tamanho da fonte reduzido */
+    }
+      
+      
+    .loginLink a:hover {
+        color: #0056b3;
+    }
+      
+      /* Estilos para o modo escuro */
+    .dark .formColumn {
+        background-color: #333;
+        color: #fff;
+    }
+      
+    .dark .formGroup label {
+        color: #fff;
+    }
+      
+    .dark .input {
+        background-color: #444;
+        color: #fff;
+        border-color: #555;
+    }
+      
+    .dark .button {
+        background-color: #0056b3;
+    }
+      
+    .dark .button:hover {
+        background-color: #004080;
+    }
+      
+    .dark .loginLink a {
+        color: #007bff;
+    }
+      
+    .dark .loginLink a:hover {
+        color: #0056b3;
+    }
+}
