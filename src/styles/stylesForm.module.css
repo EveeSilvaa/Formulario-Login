@@ -3,9 +3,11 @@
   margin: auto; 
   margin-top: 50px; /* distância do topo */
   padding: 40px;
-  border-radius: 15px;
-  background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   opacity: 0; /* inicialmente invisível */
   transform: translateY(20px); /* deslocamento inicial */
@@ -17,10 +19,15 @@
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
+.formContainer:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
 .formContainer h1 {
   text-align: center;
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 30px;
   color: #007bff;
 }
 
@@ -46,6 +53,10 @@
 .input:focus {
   border-color: #007bff; /* cor da borda ao focar no input */
   outline: none; /* remove o outline padrão */
+}
+
+.warning {
+  color: #d40a0a;
 }
 
 .button {
@@ -123,7 +134,42 @@
   transform: translateY(0);
 }
 
+.themeButton {
+  position: absolute;
+  top: 10px;
+  right: 21px;
+  background-color: transparent;
+  border: none;
+  color: rgb(48, 47, 47);
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.themeButton:hover {
+  transform: scale(1.1); /* efeito de zoom no hover */
+}
+
+.dark .header {
+  background-color: #333; 
+  color: #fff; 
+} 
+
+.dark .themeButton { 
+  color: #fff; 
+}  
+
 /* Estilos para o modo escuro */
+.dark .formContainer {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+}
+
+.dark .formContainer:hover {
+  box-shadow: 0 12px 40px rgba(255, 255, 255, 0.2);
+}
+
 .dark .registerButton {
   background-color: #218838;
 }

@@ -1,4 +1,3 @@
-// src/components/RegisterForm.js
 import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from '../styles/RegisterForm.module.css'; 

@@ -1,9 +1,8 @@
-
 import React, { useState, useContext, useEffect } from 'react';
 import { validateEmail, validatePassword } from '../utils/validation';
 import { ThemeContext } from '../context/ThemeContext';
 import styles from '../styles/stylesForm.module.css';
-import Link from 'next/link'; // Importe o Link do Next.js
+import Link from 'next/link'; 
 
 const FormLogin = () => {
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
@@ -32,7 +31,7 @@ const FormLogin = () => {
 
   return (
     <div className={`${styles.formContainer} ${isDarkMode ? styles.dark : styles.light} ${isVisible ? styles.visible : ''}`}>
-      <h1>Formulário de Login</h1>
+      <h1>Login</h1>
       <form onSubmit={handleSubmit} className={styles.form}>
         <div>
           <label>Email</label>

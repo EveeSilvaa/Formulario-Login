@@ -1,8 +1,13 @@
 
-import '../styles/global.css'; // Importe o CSS global aqui
+import '../styles/global.css'; // Importa o global.css
+import { ThemeProvider } from '../context/ThemeContext';
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <ThemeProvider>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
 }
 
 export default MyApp;

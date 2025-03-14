@@ -7,9 +7,7 @@ import { ThemeProvider } from '../context/ThemeContext';
 export default function Register() {
   return (
     <ThemeProvider>
-      <div className="App">
-        <RegisterForm />
-      </div>
+      <RegisterForm />
     </ThemeProvider>
   );
 }

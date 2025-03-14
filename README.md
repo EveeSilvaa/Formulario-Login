@@ -72,16 +72,29 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 pagina de login/
 │── public/                  
-│   ├── imagens/             
+│   ├── images/  
+│   │   ├── tecnologic.jpg           
 │── src/                     
 │   ├── components/                     
-│   │   ├── Button.jsx       
-│   │   ├── formLogin.jsx     
-│   │   ├── Input.jsx 
-│   ├── servicos/             
-│   │   ├── api.js 
+│   │   ├── Button.js     
+│   │   ├── FormLogin.js   
+│   │   ├── Header.js
+│   │   ├── HomePage.js
+│   │   ├── Input.js
+│   │   ├── RegisterForm.js
+│   ├── context/             
+│   │   ├── ThemeContext.js 
+│   ├── pages/             
+│   │   ├── _app.js 
+│   │   ├── home.js 
+│   │   ├── index.js 
+│   │   ├── register.js 
 │   ├── styles/              
-│   │   ├── styleForm.css      
+│   │   ├── global.css
+│   │   ├── Header.module.css
+│   │   ├── HomePage.module.css 
+│   │   ├── ResgisterForm.module.css
+│   │   ├── stylesForm.module.css     
 │   ├── utils/              
 │   │   ├── validation.js  
 │   ├── App.jsx
@@ -91,4 +104,3 @@ pagina de login/
 │── package.json              
 │── README.md         
 
-        
