@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <div className={styles.homeContainer}>
       <h1>O que você vai criar hoje?</h1>
-      <p>Com o Canva, é fácil criar, compartilhar e imprimir designs profissionais.</p>
+      <p>Com o AppYou, é fácil criar, compartilhar e imprimir designs profissionais.</p>
 
       <div className={styles.gridContainer}>
         <div className={styles.gridItem}>

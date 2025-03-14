@@ -77,7 +77,7 @@ const RegisterForm = () => {
         </form>
       </div>
       <div className={styles.imageColumn}>
-        <img src="/images/tecnologic.jpg" alt="Universo" className={styles.image} />
+        {/* <img src="/images/tecnologic.jpg" alt="Universo" className={styles.image} /> */}
       </div>
     </div>
   );

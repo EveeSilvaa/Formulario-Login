@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { validateEmail, validatePassword } from '../utils/validation';
 import { ThemeContext } from '../context/ThemeContext';
 import styles from '../styles/stylesForm.module.css';
-import Link from 'next/link'; 
+import Link from 'next/link';
 
 const FormLogin = () => {
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
@@ -24,13 +24,13 @@ const FormLogin = () => {
       setErrors({ email: emailError, password: passwordError });
     } else {
       setErrors({});
-      // Lógica para enviar o formulário e redirecionar para a HomePage
-      window.location.href = '/home'; // Redirecionamento temporário
+      // envia para formulário e redirecionar para a HomePage
+      window.location.href = '/home'; // redirecionando temporáriamente 
     }
   };
 
   return (
-    <div className={`${styles.formContainer} ${isDarkMode ? styles.dark : styles.light} ${isVisible ? styles.visible : ''}`}>
+    <div className={`${styles.formContainer} ${isVisible ? styles.visible : ''}`}>
       <h1>Login</h1>
       <form onSubmit={handleSubmit} className={styles.form}>
         <div>
@@ -55,10 +55,10 @@ const FormLogin = () => {
         </div>
         <button type="submit" className={styles.button}>Login</button>
         <p className={styles.forgotPassword}>
-          <Link href="/">Esqueceu a senha?</Link> {/* Link para o RegisterForm */}
+          <Link href="/">Esqueceu a senha?</Link>
         </p>
         <button type="button" className={styles.registerButton}>
-          <Link href="/register">Cadastre-se</Link> {/* Botão para o RegisterForm */}
+          <Link href="/register">Cadastre-se</Link>
         </button>
       </form>
     </div>

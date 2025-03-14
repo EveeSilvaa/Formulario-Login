@@ -70,37 +70,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-pagina de login/
-│── public/                  
-│   ├── images/  
-│   │   ├── tecnologic.jpg           
-│── src/                     
-│   ├── components/                     
-│   │   ├── Button.js     
-│   │   ├── FormLogin.js   
-│   │   ├── Header.js
-│   │   ├── HomePage.js
-│   │   ├── Input.js
-│   │   ├── RegisterForm.js
-│   ├── context/             
-│   │   ├── ThemeContext.js 
-│   ├── pages/             
-│   │   ├── _app.js 
-│   │   ├── home.js 
-│   │   ├── index.js 
-│   │   ├── register.js 
-│   ├── styles/              
-│   │   ├── global.css
-│   │   ├── Header.module.css
-│   │   ├── HomePage.module.css 
-│   │   ├── ResgisterForm.module.css
-│   │   ├── stylesForm.module.css     
-│   ├── utils/              
-│   │   ├── validation.js  
-│   ├── App.jsx
-│   ├── index.js
-│── .gitignore
-│── package-lock.json
-│── package.json              
-│── README.md         
-

@@ -2,7 +2,7 @@
   padding: 20px;
   text-align: center;
   color: #fafafa;
-  background: radial-gradient(circle, #073669, #000000); /* Fundo gradiente */
+  background: radial-gradient(circle, #073669, #000000); /* fundo gradiente */
   min-height: 100vh; /* cobrir td a altura da tela */
   display: flex;
   flex-direction: column;

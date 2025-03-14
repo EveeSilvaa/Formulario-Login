@@ -1,13 +1,12 @@
 .formContainer {
   max-width: 350px;
-  margin: auto; 
+  margin: auto;
   margin-top: 50px; /* distância do topo */
   padding: 40px;
-  border-radius: 20px;
-  backdrop-filter: blur(20px);
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8); /* fundo semi-transparente */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* borda sutil */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* sombra suave */
   transition: all 0.3s ease;
   opacity: 0; /* inicialmente invisível */
   transform: translateY(20px); /* deslocamento inicial */
@@ -20,64 +19,62 @@
 }
 
 .formContainer:hover {
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* sombra mais intensa no hover */
+  transform: translateY(-5px); /* efeito de levantar o container */
 }
 
 .formContainer h1 {
   text-align: center;
   margin-bottom: 20px;
-  font-size: 30px;
-  color: #007bff;
+  font-size: 24px;
+  color: #333;
 }
 
 .form {
   display: flex;
-  flex-direction: column; /* define o formato do formulario */
-  gap: 20px;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .label {
   text-align: left;
+  font-size: 14px;
+  color: #555;
 }
 
 .input {
-  width: 90%;
-  padding: 15px;
+  width: 100%;
+  padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 8px; /* bordas arredondadas nos inputs */
-  font-size: 16px;
-  transition: border-color 0.3s ease; /* Transição suave para o foco */
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
 }
 
 .input:focus {
-  border-color: #007bff; /* cor da borda ao focar no input */
-  outline: none; /* remove o outline padrão */
-}
-
-.warning {
-  color: #d40a0a;
+  border-color: #007bff;
+  outline: none;
 }
 
 .button {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 8px; /* bordas arredondadas no botão */
+  border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .button:hover {
-  background-color: #0056b3; /* cor mais escura no hover */
-  transform: translateY(-2px); /* efeito de levantar o botão */
+  background-color: #0056b3;
+  transform: translateY(-2px);
 }
 
 .button:active {
-  transform: translateY(0); /* efeito de pressionar o botão */
+  transform: translateY(0);
 }
 
 .forgotPassword {
@@ -112,92 +109,24 @@
 
 .registerButton {
   width: 100%;
-  padding: 12px;
-  background-color: #28a745; /* Cor verde para o botão de cadastro */
+  padding: 10px;
+  background-color: #28a745;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
   text-align: center;
-  text-decoration: none; /* Remove o sublinhado do link */
-  display: block; /* Faz o botão ocupar toda a largura */
+  text-decoration: none;
+  display: block;
 }
 
 .registerButton:hover {
-  background-color: #218838; /* Cor mais escura no hover */
+  background-color: #218838;
   transform: translateY(-2px);
 }
 
 .registerButton:active {
   transform: translateY(0);
-}
-
-.themeButton {
-  position: absolute;
-  top: 10px;
-  right: 21px;
-  background-color: transparent;
-  border: none;
-  color: rgb(48, 47, 47);
-  font-size: 24px;
-  cursor: pointer;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.themeButton:hover {
-  transform: scale(1.1); /* efeito de zoom no hover */
-}
-
-.dark .header {
-  background-color: #333; 
-  color: #fff; 
-} 
-
-.dark .themeButton { 
-  color: #fff; 
-}  
-
-/* Estilos para o modo escuro */
-.dark .formContainer {
-  background: rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
-}
-
-.dark .formContainer:hover {
-  box-shadow: 0 12px 40px rgba(255, 255, 255, 0.2);
-}
-
-.dark .registerButton {
-  background-color: #218838;
-}
-
-.dark .registerButton:hover {
-  background-color: #1e7e34;
-}
-
-.light {
-  background: linear-gradient(135deg, #ffffff, #f0f0f0); /* gradiente claro */
-  color: #000000;
-}
-
-.dark {
-  background: linear-gradient(135deg, #333333, #222222); /*  e gradiente escuro */
-  color: #ffffff;
-}
-
-.dark .input {
-  background-color: #444;
-  color: #fff;
-  border-color: #555;
-}
-
-.dark .button {
-  background-color: #0056b3;
-}
-
-.dark .button:hover {
-  background-color: #004080;
 }
