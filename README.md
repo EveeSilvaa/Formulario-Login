@@ -94,7 +94,7 @@ O projeto está em desenvolvimento ativo, e as seguintes funcionalidades estão 
 2. Navegue até a pasta do projeto:
 
    ```bash
-   cd travelmaster
+   cd Formulario-Login
    ```
 
 3. Instale as dependências:
