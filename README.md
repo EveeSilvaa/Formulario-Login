@@ -21,10 +21,6 @@ O projeto está em constante desenvolvimento, e novas funcionalidades estão sen
 - Exibição de imagens e descrições dos destinos encontrados.
 - Integração com a API da **OpenWeatherMap** para mostrar a previsão do tempo no destino pesquisado.
 
-### **4. Header Dinâmico**
-- Botões de Login e Cadastro são substituídos por uma imagem de usuário e uma mensagem de "Bem-vindo" após o login.
-- Ícone de usuário que abre um **Sidebar** com opções como Perfil, Configurações, Ajuda e Logout.
-
 ### **5. Dark Mode**
 - Botão para alternar entre os temas claro e escuro.
 <<<<<<< HEAD
@@ -72,6 +68,11 @@ O projeto está em desenvolvimento ativo, e as seguintes funcionalidades estão 
 ### **6. Sidebar** (Constru
 - Menu lateral que exibe opções relacionadas ao TravelMaster.
 - Acessível ao clicar no ícone de usuário no Header.
+
+### **7. Header Dinâmico**
+- Botões de Login e Cadastro são substituídos por uma imagem de usuário e uma mensagem de "Bem-vindo" após o login.
+- Ícone de usuário que abre um **Sidebar** com opções como Perfil, Configurações, Ajuda e Logout.
+
 
 
 ---
