@@ -1,16 +1,10 @@
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #4a4a69;
-  color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* pro header fique acima de outros elementos */
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .logo {
@@ -21,8 +15,8 @@
 
 .logo h1 {
   margin: 0;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 19px;
+  color: #333;
 }
 
 .nav ul {
@@ -33,19 +27,24 @@
   padding: 0;
 }
 
-.nav ul li {
-  display: inline-block;
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s ease;
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
 }
 
-.nav ul li a:hover {
-  color: #ffdd57;
+.bi bi-person {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .authButtons {
@@ -70,8 +69,8 @@
 
 .themeButton {
   background-color: transparent;
-  border: none;
-  color: white;
+  border-radius: 59px;
+  border-color: #007bff;
   font-size: 24px;
   cursor: pointer;
   transition: transform 0.3s ease, color 0.3s ease;
@@ -80,3 +79,4 @@
 .themeButton:hover {
   transform: scale(1.1);
 }
+

@@ -1,36 +1,27 @@
+/* Estilos para o tema claro (padrão) */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: rgb(2,0,36);
-  background: radial-gradient(circle, #073669, #000000);
-}
-  
-.App {
-  text-align: center;
-  padding: 20px;
-  color: #ffffff;
-}
-  
-.button {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-  
-.button:hover {
-  background-color: #0056b3;
-}
-  
-.light {
   background-color: #ffffff;
   color: #000000;
 }
-  
-.dark {
-  background-color: #333333;
+
+/* Estilos para o tema escuro */
+body.dark {
+  background-color: #121212;
   color: #ffffff;
 }
+
+body.dark .header {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark .button {
+  background-color: #333;
+  color: #ffffff;
+}
+
+body.dark .button:hover {
+  background-color: #555;
+}
+
+/* Adicione mais estilos para o tema escuro conforme necessário */

@@ -1,17 +1,25 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import styles from '../styles/RegisterForm.module.css'; 
-
+import styles from '../styles/RegisterForm.module.css';
 
 const RegisterForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [phone, setPhone] = useState('');
   const [newsletter, setNewsletter] = useState(false);
+  const [errors, setErrors] = useState({});
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Validação de senha
+    if (password !== confirmPassword) {
+      setErrors({ confirmPassword: 'As senhas não coincidem' });
+      return;
+    }
+
     console.log('Cadastro realizado:', { name, email, password, phone, newsletter });
   };
 
@@ -51,14 +59,33 @@ const RegisterForm = () => {
             />
           </div>
           <div className={styles.formGroup}>
-            <label>Telefone</label>
+            <label>Confirmar Senha</label>
             <input
-              type="tel"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              type="password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
               className={styles.input}
               required
             />
+            {errors.confirmPassword && <span>{errors.confirmPassword}</span>}
+          </div>
+          <div className={styles.formGroup}>
+            <label>Telefone</label>
+            <div className={styles.phoneInput}>
+              <select className={styles.dddSelect}>
+                <option value="11">11</option>
+                <option value="21">21</option>
+                <option value="31">31</option>
+                {/* Adicione mais DDDs conforme necessário */}
+              </select>
+              <input
+                type="tel"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                className={styles.input}
+                required
+              />
+            </div>
           </div>
           <div className={styles.formGroup}>
             <label>

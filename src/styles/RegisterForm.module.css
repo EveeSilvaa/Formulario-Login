@@ -19,7 +19,7 @@
 .imageColumn {
   flex: 1;
   /* width: 120px; */
-  background: url('/images/tecnologic.jpg') no-repeat center center/cover; 
+  background: url('/images/tavel-register.jpg') no-repeat center center/cover; 
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -50,6 +50,19 @@
     width: 40px;
     color: #0f0f0f;
     font-weight: bold;
+}
+
+.phoneInput {
+  display: flex;
+  gap: 10px;
+}
+
+.dddSelect {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: white;
 }
 
 .input {

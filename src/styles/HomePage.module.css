@@ -1,78 +1,90 @@
 .homeContainer {
   padding: 20px;
   text-align: center;
-  color: #fafafa;
-  background: radial-gradient(circle, #073669, #000000); /* fundo gradiente */
-  min-height: 100vh; /* cobrir td a altura da tela */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  color: #333;
+  background-color: #f9f9f9;
+  min-height: 100vh;
 }
 
-.homeContainer h1 {
+.banner {
+  background: url('/images/travel-banner.jpg') no-repeat center center/cover;
+  padding: 100px 20px;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.banner h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #000;
 }
 
-.homeContainer p {
+.banner p {
   font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.searchBar input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.searchBar button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popularDestinations, .specialOffers {
   margin-bottom: 40px;
-  color: #ffffff; 
 }
 
-.gridContainer {
+.destinationGrid, .offerGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  width: 80%;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
-.gridItem {
-  background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+.destinationCard, .offerCard {
+  background-color: white;
   border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #ffffff; 
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.gridItem:hover {
+.destinationCard:hover, .offerCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(231, 221, 221, 0.2);
 }
 
-.gridItem h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+.destinationCard img, .offerCard img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
 }
 
-.gridItem p {
-  font-size: 1rem;
+.destinationCard h3, .offerCard h3 {
+  font-size: 1.2rem;
   margin: 10px 0;
 }
 
-.workProcess {
-  margin-top: 40px;
-  color: #ffffff; /* texto branco */
-}
-
-.workProcess h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-}
-
-.workProcess ul {
-  list-style: none;
-  padding: 0;
-}
-
-.workProcess li {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+.destinationCard p, .offerCard p {
+  font-size: 1rem;
+  color: #666;
+  padding: 0 10px 10px;
 }
 
 .loginButton {
@@ -81,7 +93,7 @@
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s ease;
@@ -89,4 +101,12 @@
 
 .loginButton:hover {
   background-color: #0056b3;
+}
+
+.weatherSection {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

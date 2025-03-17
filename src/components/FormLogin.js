@@ -24,8 +24,8 @@ const FormLogin = () => {
       setErrors({ email: emailError, password: passwordError });
     } else {
       setErrors({});
-      // envia para formulário e redirecionar para a HomePage
-      window.location.href = '/home'; // redirecionando temporáriamente 
+      // Redirecionar para a página inicial após o login
+      window.location.href = '/';
     }
   };
 
