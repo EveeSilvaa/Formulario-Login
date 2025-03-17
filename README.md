@@ -1,72 +1,159 @@
-# Getting Started with Create React App
+## **TravelMaster** ✈📱
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O **TravelMaster** é um aplicativo de viagens desenvolvido como uma extensão de um desafio proposto pela **DevEx Soluções**. Inicialmente, o desafio consistia em criar uma página de login, mas decidi expandir a ideia para construir uma interface completa de um aplicativo de viagens, com funcionalidades como pesquisa de destinos, previsão do tempo, e muito mais.
 
-## Available Scripts
+O projeto está em constante desenvolvimento, e novas funcionalidades estão sendo implementadas, como a mudança de tema (Dark Mode) e a integração de mais APIs para enriquecer a experiência do usuário.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## **Funcionalidades Atuais**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### **1. Página de Login**
+- Interface de login com validação de e-mail e senha.
+- Redirecionamento para a página inicial após o login bem-sucedido.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### **2. Página de Cadastro**
+- Formulário de cadastro com campos para nome, e-mail, senha, confirmação de senha e telefone.
+- Validação de senha para garantir que as senhas coincidam.
 
-### `npm test`
+### **3. Página Inicial**
+- Pesquisa de destinos turísticos utilizando a API da **Unsplash**.
+- Exibição de imagens e descrições dos destinos encontrados.
+- Integração com a API da **OpenWeatherMap** para mostrar a previsão do tempo no destino pesquisado.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### **4. Header Dinâmico**
+- Botões de Login e Cadastro são substituídos por uma imagem de usuário e uma mensagem de "Bem-vindo" após o login.
+- Ícone de usuário que abre um **Sidebar** com opções como Perfil, Configurações, Ajuda e Logout.
 
-### `npm run build`
+### **5. Dark Mode**
+- Botão para alternar entre os temas claro e escuro.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## **Tecnologias Utilizadas**
 
-### `npm run eject`
+- **Next.js**: Framework React para construção de aplicações web modernas.
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **Axios**: Cliente HTTP para fazer requisições à API.
+- **CSS Modules**: Para estilização modularizada e evitando conflitos de classes.
+- **Context API**: Para gerenciamento de estado global (como o tema escuro/claro).
+- **APIs Externas**:
+  - **Unsplash**: Para buscar imagens de destinos turísticos.
+  - **OpenWeatherMap**: Para obter a previsão do tempo nos destinos pesquisados.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## **Próximas Funcionalidades**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+O projeto está em desenvolvimento ativo, e as seguintes funcionalidades estão planejadas:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### **1. Integração de Mais APIs**
+- **Skyscanner**: Para buscar voos e preços.
+- **Amadeus**: Para buscar hotéis e atividades turísticas.
 
-## Learn More
+### **2. Melhorias no Dark Mode**
+- Aplicar o tema escuro em todos os componentes de forma consistente.
+- Adicionar transições suaves ao alternar entre temas.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### **3. Páginas Adicionais**
+- **Perfil do Usuário**: Onde o usuário pode editar suas informações.
+- **Configurações**: Para personalizar a experiência no aplicativo.
+- **Ajuda**: Página com FAQs e suporte ao usuário.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### **4. Internacionalização**
+- Adicionar suporte a múltiplos idiomas.
 
-### Code Splitting
+### **5. Responsividade**
+- Garantir que o aplicativo funcione bem em dispositivos móveis e tablets.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### **6. Sidebar** (Constru
+- Menu lateral que exibe opções relacionadas ao TravelMaster.
+- Acessível ao clicar no ícone de usuário no Header.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## **Como Executar o Projeto**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### **Pré-requisitos**
+- Node.js instalado (versão 14 ou superior).
+- Yarn ou npm instalado.
 
-### Advanced Configuration
+### **Passos para Executar**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Clone o repositório:
 
-### Deployment
+   ```bash
+   git clone https://github.com/seu-usuario/Formulario-Login.git
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+2. Navegue até a pasta do projeto:
 
-### `npm run build` fails to minify
+   ```bash
+   cd travelmaster
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3. Instale as dependências:
 
+   ```bash
+   npm install
+   ```
+
+   ou
+
+   ```bash
+   yarn install
+   ```
+
+4. Crie um arquivo `.env.local` na raiz do projeto e adicione as chaves das APIs:
+
+   ```env
+   UNSPLASH_API_KEY=sua_chave_unsplash
+   OPENWEATHER_API_KEY=sua_chave_openweather
+   ```
+
+5. Inicie o servidor de desenvolvimento:
+
+   ```bash
+   npm run dev
+   ```
+
+   ou
+
+   ```bash
+   yarn dev
+   ```
+
+6. Acesse o aplicativo no navegador:
+
+   ```
+   http://localhost:3000
+   ```
+
+
+---
+
+## **Contribuição**
+
+Contribuições são bem-vindas! Se você quiser contribuir para o projeto, siga os passos abaixo:
+
+1. Faça um fork do repositório.
+2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`).
+3. Commit suas alterações (`git commit -m 'Adiciona nova feature'`).
+4. Push para a branch (`git push origin feature/nova-feature`).
+5. Abra um Pull Request.
+
+---
+
+## **Contato**
+
+Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato:
+
+- **Nome**: [Maria Evellyn]
+- **E-mail**: [evesilva.contato@gmail.com]
+- **GitHub**: [seu-usuario](https://github.com/EveeSilvaa)
+
+
+**TravelMaster** é um projeto em constante evolução, e estou animada para ver até onde ele pode chegar! 🚀
 
